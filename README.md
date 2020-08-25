@@ -1,8 +1,8 @@
 # micropython-ChuckNorris-scroller-mqqt
 Displays Chuck Norris quotes on max7219 LED matrix panel using MQQT
 
-# Voorbeeld quote:
- - Chuck Norris' Christmas tree is actually a 20 foot Tesla coil. It is also necessary to power his electric beard trimmer.
+<h2>Chuck Norris' Christmas tree is actually a 20 foot Tesla coil. It is also necessary to power his electric beard trimmer.</h2>
+<img src='https://media3.giphy.com/media/3hvmlYNsOTFWE/giphy.gif' alt='Chuck norris goedkeuring'>
 
 # Installatie en benoodigheden
 Om deze te kunnen gebruiken
