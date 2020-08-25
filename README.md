@@ -21,7 +21,7 @@ Om deze te kunnen gebruiken
 mqqt1 = e4kMQQT(ssid='mySSID', password='mypwd', mqqt_server='dietpi')
 ```
 5. Installeer MQQT libs op jouw Micropython apparaat
-``
+```bash
 MicroPython v1.11-8-g48dcbbe60 on 2019-05-29; ESP module with ESP8266
 
 Type "help()" for more information. [backend=GenericMicroPython]
