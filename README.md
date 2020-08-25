@@ -13,14 +13,16 @@ Om deze te kunnen gebruiken
 - Mijn <a href='https://github.com/pappavis/micropython-max7219MatrixTextscroller-lib'>micropython-max7219MatrixTextscroller-lib</a> bibliotheek.
 
 ## Installatiestappen
-1. Instaleer een Linux distributie zoals Ubuntu, of dietpi op Raspberry Pi
+1. Installeer een Linux distributie zoals Ubuntu, of dietpi op Raspberry Pi
 2. Installeer NodeRed.
 3. Deploy de <a href='ChuckNorrisScroller_nodered.json'>ChuckNorrisScroller_nodered.json</a> Nodered flow.
 4. Bijwerken jouw wifi gegevens.
 ```python
 mqqt1 = e4kMQQT(ssid='mySSID', password='mypwd', mqqt_server='dietpi')
 ```
-5. Installeer MQQT libs op jouw Micropython apparaat
+
+5. Installeer max7219MatrixTextscroller bibliotheek op jouw device bijvb met <a href='https://pypi.org/project/mpfshell/'>mpfshell</a>.
+6. Installeer MQQT libs op jouw Micropython apparaat
 ```bash
 MicroPython v1.11-8-g48dcbbe60 on 2019-05-29; ESP module with ESP8266
 
