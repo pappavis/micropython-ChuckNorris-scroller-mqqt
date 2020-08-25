@@ -1,2 +1,26 @@
 # micropython-ChuckNorris-scroller-mqqt
 Displays Chuck Norris quotes on max7219 LED matrix panel using MQQT
+
+# Voorbeeld quote:
+ - Chuck Norris' Christmas tree is actually a 20 foot Tesla coil. It is also necessary to power his electric beard trimmer.
+
+# Installatie en benoodigheden
+Om deze te kunnen gebruiken
+
+## Benodigheden
+- ESP8266 of ESP32 met Micropython geflasht bijvb Wemos D1 Mini   €2,50.
+- Een MAX7219 <a href='https://nl.aliexpress.com/item/32618155357.html?spm=a2g0s.9042311.0.0.27424c4dJuFSZU'>LED Matrix</a> paneel  €2,80.
+- Mijn <a href='https://github.com/pappavis/micropython-max7219MatrixTextscroller-lib'>micropython-max7219MatrixTextscroller-lib</a> bibliotheek.
+
+## Installatiestappen
+1. Instaleer een Linux distributie zoals Ubuntu, of dietpi op Raspberry Pi
+2. Installeer NodeRed.
+3. Deploy de <a href='ChuckNorrisScroller_nodered.json'>ChuckNorrisScroller_nodered.json</a> Nodered flow.
+4. Bijwerken jouw wifi gegevens.
+```python
+mqqt1 = e4kMQQT(ssid='mySSID', password='mypwd', mqqt_server='dietpi')
+```
+5. Uploaden naar jouw device en.. lachen :)
+
+# Credits
+20200825 door Michiel Erasmus.
