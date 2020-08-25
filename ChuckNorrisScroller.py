@@ -13,11 +13,11 @@ class e4kMQQT:
         self.__mqtt_server = mqqt_server
         #EXAMPLE IP ADDRESS
         #mqtt_server = '192.168.1.144'
-        self.client_id = ubinascii.hexlify(machine.unique_id())
-        self.topic_pub = b'lichtkrant/mqqt_connect'
-        self.topic_sub = b'lichtkrant/tape'
+        self.__client_id = ubinascii.hexlify(machine.unique_id())
+        self.__topic_pub = b'lichtkrant/mqqt_connect'
+        self.__topic_sub = b'lichtkrant/tape'
         self.scoller1 = MatrixTextscroller()
-        self.topic_connect_pub = 'lichtkrant/mqqt_connect'
+        self.__topic_connect_pub = 'lichtkrant/mqqt_connect'
         self.__lichtKrantTekst = '   MQQT default  '
         self.__client = None
         self.__debug = False
@@ -62,15 +62,15 @@ class e4kMQQT:
         if not self.__client.connect(clean_session=False):
             print("New session being set up")
             
-        strTxt1 = str(self.client_id) + '; connected aan ' + self.topic_connect_pub + '.'
+        strTxt1 = str(self.client_id) + '; connected aan ' + self.__topic_connect_pub + '.'
         self.__client.subscribe(self.topic_sub)    
-        self.__client.publish(self.topic_connect_pub, strTxt1)
+        self.__client.publish(self.__topic_connect_pub, strTxt1)
         print(strTxt1)
         self.scoller1.scrollText(textToScroll='    ' + strTxt1)
         
         print('')
 
-        strTxt1 = str(self.client_id) + ' connected to ' + str(self.mqtt_server) + ' MQTT broker, subscribed to topic ' + str(self.topic_sub)
+        strTxt1 = str(self.client_id) + ' connected to ' + str(self.__mqtt_server) + ' MQTT broker, subscribed to topic ' + str(self.topic_sub)
         print(strTxt1)
         self.scoller1.scrollText(textToScroll='    ' + strTxt1)
 
@@ -98,6 +98,7 @@ class e4kMQQT:
     def lichtKrantTekst(self, value):
         self.__lichtKrantTekst = value
 
+
     @property
     def debug(self):
         return self.__debug
@@ -105,6 +106,32 @@ class e4kMQQT:
     @debug.setter
     def debug(self, value):
         self.__debug = value
+
+
+    @property
+    def topic_pub(self):
+        return self.__topic_pub
+
+    @topic_pub.setter
+    def topic_pub(self, value):
+        self.__topic_pub = value
+
+
+    @property
+    def topic_sub(self):
+        return self.__topic_sub
+
+    @topic_sub.setter
+    def topic_sub(self, value):
+        self.__topic_sub = value
+
+    @property
+    def client_id(self):
+        return self.__client_id
+
+    @client_id.setter
+    def client_id(self, value):
+        self.__client_id = value
 
 
 def main():
@@ -115,7 +142,7 @@ def main():
     client = None
     teller1 = 0
 
-    mqqt1 = e4kMQQT(ssid='mySSID', password='mypwd', mqqt_server='dietpi')    
+    mqqt1 = e4kMQQT(ssid='Volksrepubliek', password='C0mmodore64!', mqqt_server='dietpi')    
     
     while (isWaar1):
         try:
@@ -127,7 +154,7 @@ def main():
                 client = mqqt1.connect_and_subscribe()
 
             if (utime.ticks_ms() > next_publishevent):
-                mqqt1.client.publish(topic_pub, str(mqqt1.client_id) + ';' + str(next_publishevent))
+                mqqt1.client.publish(mqqt1.topic_pub, str(mqqt1.client_id) + ';' + str(next_publishevent))
                 next_publishevent = utime.ticks_ms() + message_interval
 
             new_message = mqqt1.client.check_msg()
