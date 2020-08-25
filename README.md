@@ -22,5 +22,9 @@ mqqt1 = e4kMQQT(ssid='mySSID', password='mypwd', mqqt_server='dietpi')
 ```
 5. Uploaden naar jouw device en.. lachen :)
 
+# Node red flow
+Deze moet je deployen op jouw Node Red server.
+<img src='https://github.com/pappavis/micropython-ChuckNorris-scroller-mqqt/blob/master/ChuckNorrisFlow_nodered.jpg?raw=true' width='40%' height='40%'>
+
 # Credits
 20200825 door Michiel Erasmus.
