@@ -38,7 +38,8 @@ Installing micropython-umqtt.robust 1.0.1 from https://micropython.org/pi/umqtt.
 >>> 
 ```
 
-5. Uploaden naar jouw device en.. lachen :)
+5. Uploaden naar jouw device en.. lachen :)<br>
+<img src='https://github.com/pappavis/micropython-ChuckNorris-scroller-mqqt/blob/master/ChuckNorrisScroller_demo1.jpg?raw=true'><br/>
 
 # Node red flow
 Deze moet je deployen op jouw Node Red server.<br/>
