@@ -142,7 +142,7 @@ def main():
     client = None
     teller1 = 0
 
-    mqqt1 = e4kMQQT(ssid='Volksrepubliek', password='C0mmodore64!', mqqt_server='dietpi')    
+    mqqt1 = e4kMQQT(ssid='ssid', password='secret', mqqt_server='dietpi')    
     
     while (isWaar1):
         try:
