@@ -20,6 +20,22 @@ Om deze te kunnen gebruiken
 ```python
 mqqt1 = e4kMQQT(ssid='mySSID', password='mypwd', mqqt_server='dietpi')
 ```
+5. Installeer MQQT libs op jouw Micropython apparaat
+``shell
+MicroPython v1.11-8-g48dcbbe60 on 2019-05-29; ESP module with ESP8266
+
+Type "help()" for more information. [backend=GenericMicroPython]
+>>> import upip
+>>> upip.install("micropython-umqtt.robust")
+Installing to: /lib/
+
+Warning: micropython.org SSL certificate is not validated
+
+Installing micropython-umqtt.robust 1.0.1 from https://micropython.org/pi/umqtt.robust/umqtt.robust-1.0.1.tar.gz
+
+>>> 
+```
+
 5. Uploaden naar jouw device en.. lachen :)
 
 # Node red flow
