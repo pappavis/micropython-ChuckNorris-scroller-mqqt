@@ -1,4 +1,3 @@
-# micropython-ChuckNorris-scroller-mqqt
 Displays Chuck Norris quotes on max7219 LED matrix panel using MQQT
 
 <img src='https://github.com/pappavis/micropython-ChuckNorris-scroller-mqqt/blob/master/ChuckNorrisScroller_demo1.jpg?raw=true' width='20%' height='20%'><br/>
