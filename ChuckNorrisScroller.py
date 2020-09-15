@@ -28,7 +28,7 @@ class e4kMQQT:
 
         print(self.client_id, '\tBericht ontvangen topic=',topic, '   msg=', msg)
         
-        if(topic == self.topic_sub):
+        if(topic == self.__topic_sub):
             print(self.client_id, '\t topic ',topic, ' was bijgewerkt met nieuwe msg.')
             self.lichtKrantTekst = str(msg)
             self.scoller1.scrollText(textToScroll='  ' + self.lichtKrantTekst)
