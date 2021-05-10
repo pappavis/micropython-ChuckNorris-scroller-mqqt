@@ -41,6 +41,15 @@ Installing micropython-umqtt.robust 1.0.1 from https://micropython.org/pi/umqtt.
 
 5. Uploaden naar jouw device en.. lachen :)<br>
 
+# Pinout
+|Wemos D1 Mini	| max7219 8x8 LED Matrix|
+|---|---|
+|5V|VCC|
+|GND|GND|
+|D7 MOSI (GPIO13)|DIN|
+|D8 CS (GPIO15)|CS|
+|D5 SCK (GPIO14)|CLK|
+
 # Node red flow
 Deze <a href='https://github.com/pappavis/micropython-ChuckNorris-scroller-mqqt/blob/master/ChuckNorrisScroller_nodered.json'>flow</a> moet je deployen op jouw Node Red server.<br/>
 <img src='https://github.com/pappavis/micropython-ChuckNorris-scroller-mqqt/blob/master/ChuckNorrisFlow_nodered.jpg?raw=true' width='80%' height='80%'><br/>
